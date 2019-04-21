@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="../css/login.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+    <meta name="description" content="">
+</head>
+<body style="background-image: url(https://couturelane.com/wp-content/uploads/2016/12/login-background-1.jpg);">
+
+  <div id="login_div" class="main-div">
+    <h3>CakeHouse Login Form </h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+    <button onclick="direct()">DirectCRUD</button>
+
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDTVRiEnFEgBycAP0VQ8-03hpS2ikEGyGQ",
+    authDomain: "chatbox-de628.firebaseapp.com",
+    databaseURL: "https://chatbox-de628.firebaseio.com",
+    projectId: "chatbox-de628",
+    storageBucket: "chatbox-de628.appspot.com",
+    messagingSenderId: "85044423613"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="../js/login.js"></script>
+
+</body>
+</html>

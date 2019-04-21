@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Products Management</title>
+		<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="../js/products.js"></script>
+	
+</head>
+
+<body style="background-image: url(https://wallpapercave.com/wp/wp2508260.jpg);">
+	
+	<h1 style="text-align: center; color:#D2B48C;">Products Management</h1>
+	<div  style="padding-left: 540px; padding-top: 150px; color: blue;text-transform: uppercase; font-size: 17px">
+		<table >
+			<tr>
+				<td><b>Id: </b> </td>
+				<td><input type="text" name="id" id="user_id" placeholder="Random(don't need enter)" /></td>
+			</tr>
+			<tr>
+				<td><b>Name:</b>  </td>
+				<td><input type="text" name="user_name" id="user_name" /></td>
+			</tr>
+			<tr>
+				<td><b>Prices:</b>  </td>
+				<td><input type="text" name="Prices" id="Prices" /></td>
+			</tr>
+			<tr>
+
+				<td colspan="2">
+					<input type="button" value="Save" onclick="save_user();" />
+					<input type="button" value="Update" onclick="update_user();" />
+					<input type="button" value="Delete" onclick="delete_user();" />
+					<input type="button" value="BackHomePage" onclick="BackHomePage();" />
+				</td>
+			</tr>
+		</table>
+
+	</div>
+	<br><br><br>
+	<div class="Products">
+    <h2 style="text-align: center;">Goods Available</h2>
+    <table id="tbl_users_list" border="1" class="table table-striped">
+  <tr>
+   <td>#ID</td>
+   <td>Products</td>
+   <td>Prices</td>
+ </tr>
+</table>
+<script type="text/javascript">
+	function BackHomePage(){
+	 	window.open("../index.html");
+	}
+</script>
+</body>
+</html>
