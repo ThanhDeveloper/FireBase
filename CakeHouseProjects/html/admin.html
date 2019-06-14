@@ -6,8 +6,13 @@
 		<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
   	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<script src="../js/products.js"></script>
-	
+
+
+
+<!--FirebaseDataset-->
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
 </head>
 
 <body style="background-image: url(https://wallpapercave.com/wp/wp2508260.jpg);">
@@ -16,12 +21,12 @@
 	<div  style="padding-left: 540px; padding-top: 150px; color: blue;text-transform: uppercase; font-size: 17px">
 		<table >
 			<tr>
-				<td><b>Id: </b> </td>
-				<td><input type="text" name="id" id="user_id" placeholder="Random(don't need enter)" /></td>
+				<td><b>CakeNo: </b> </td>
+				<td><input type="text" name="Cakeid" id="Cakeid" placeholder="Random(don't need enter)" /></td>
 			</tr>
 			<tr>
-				<td><b>Name:</b>  </td>
-				<td><input type="text" name="user_name" id="user_name" /></td>
+				<td><b>CakeName:</b>  </td>
+				<td><input type="text" name="Cakename" id="Cakename" /></td>
 			</tr>
 			<tr>
 				<td><b>Prices:</b>  </td>
@@ -30,29 +35,31 @@
 			<tr>
 
 				<td colspan="2">
-					<input type="button" value="Save" onclick="save_user();" />
-					<input type="button" value="Update" onclick="update_user();" />
-					<input type="button" value="Delete" onclick="delete_user();" />
+					<input type="button" value="Save" onclick="saveCake();" />
+					<input type="button" value="Update" onclick="updateCake();" />
+					<input type="button" value="Delete" onclick="deleteCake();" />
 					<input type="button" value="BackHomePage" onclick="BackHomePage();" />
 				</td>
 			</tr>
 		</table>
-
+		
 	</div>
 	<br><br><br>
 	<div class="Products">
     <h2 style="text-align: center;">Goods Available</h2>
-    <table id="tbl_users_list" border="1" class="table table-striped">
+    <table id="tbl_Cakes_list" border="1" class="table table-dark" ">
   <tr>
-   <td>#ID</td>
-   <td>Products</td>
-   <td>Prices</td>
+   <td style="color: red">#CakeNo</td>
+   <td style="color: red" >CakesName</td>
+   <td style="color: red">Prices</td>
  </tr>
+
 </table>
 <script type="text/javascript">
 	function BackHomePage(){
 	 	window.open("../index.html");
 	}
 </script>
+<script src="../js/admin.js"></script>	
 </body>
 </html>

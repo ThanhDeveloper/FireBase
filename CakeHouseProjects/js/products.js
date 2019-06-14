@@ -10,21 +10,21 @@
   firebase.initializeApp(config);
 
   //Load Dataset on table
-  var tblUsers = document.getElementById('tbl_users_list');
-  var databaseRef = firebase.database().ref('users/');
+  var tblCakes = document.getElementById('tbl_Cakes_list');
+  var databaseRef = firebase.database().ref('Cakes/');
   var rowIndex = 1;
   
   databaseRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
      var childKey = childSnapshot.key;
-     var childData = childSnapshot.val();
+     var childData = childSnapshot.val(); //duyệt qua 
 
-     var row = tblUsers.insertRow(rowIndex);
+     var row = tblCakes.insertRow(rowIndex);
      var cellId = row.insertCell(0);
      var cellName = row.insertCell(1);
      var cellPrices =row.insertCell(2);
      cellId.appendChild(document.createTextNode(childKey));
-     cellName.appendChild(document.createTextNode(childData.user_name));
+     cellName.appendChild(document.createTextNode(childData.Cakename));
      cellPrices.appendChild(document.createTextNode(childData.Prices));
      rowIndex = rowIndex + 1;
    });

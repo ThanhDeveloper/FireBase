@@ -18,38 +18,89 @@
 <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
 <!--FirebaseDataset-->
 <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-
+<!--ajax-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <body ng-app="app" style="background-image: url(http://inquocthanh.com/wp-content/uploads/2015/06/bg-iqt.jpg); ">
     <h1>Products Order</h1>
     <h2 style="text-align: center; color:red ">Cakes for today</h2>
     <br><br><br>
     <!--Products database-->
-    <div class="Products">
-        <table id="tbl_users_list" border="1" class="table table-striped">
+    <div class="Products" style="font-style: bold">
+        <table id="tbl_Cakes_list" border="1" class="table table-striped">
             <tr>
-                <td><b>#ID</b></td>
-                <td><b>Products</b></td>
+                <td><b>CakeNo</b></td>
+                <td><b>CakeName</b></td>
                 <td><b>Prices</b></td>
             </tr>
         </table>
+    
+    </div>
+      <!--contact-->  
+
+         <form action="https://gmail.us20.list-manage.com/subscribe/post?u=6af0b81d953a6b18bed5fbf64&amp;id=3585731946" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate " target="_blank" novalidate style="margin-left: auto;margin-right: auto ">
+    <div id="mc_embed_signup_scroll">
+    <h2>Subscribe Register</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group form-group">
+    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+</div>
+<div class="mc-field-group form-group">
+    <label for="mce-LNAME">Name </label>
+    <input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME">
+</div>
+<div class="mc-field-group form-group">
+    <label for="mce-LNAME">PHONE </label>
+    <input type="text" value="" name="PHONE" class="form-control" id="mce-PHONE">
+</div>
+
+    <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6af0b81d953a6b18bed5fbf64_3585731946" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary"></div>
+    </div>
+</form>
+
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(
+    function($) {window.fnames = new Array(); 
+    window.ftypes = new Array();
+fnames[0]='EMAIL';ftypes[0]='email';
+fnames[1]='FNAME';ftypes[1]='text';
+fnames[2]='LNAME';ftypes[2]='text';
+fnames[3]='ADDRESS';ftypes[3]='address';
+fnames[4]='PHONE';ftypes[4]='phone';
+fnames[5]='BIRTHDAY';ftypes[5]='birthday';}
+(jQuery));
+var $mcj = jQuery.noConflict(true);</script>
         <!--Chatbox realtime-->
-        <button class="open-button" onclick="openForm()">Chat</button>
+        <div>
+            
+          <button class="open-button" onclick="openForm()">Chat Order</button>
         <div class="chat-popup" id="myForm">
             <div ng-controller="chatCtrl">
-                <div id="chatBox" style="padding: 10px; border: black 1px solid">
-                    <h1>Chat box order</h1>
+                <div id="chatBox" style="padding: 0px; border: black 10px solid">
+                    <h6>Xin Chào!</h6>
                     <div ng-repeat="chatMessage in chatMessages | limitTo:-15"> <span style="font-weight: bold">{{chatMessage.name}}</span> : <span>{{chatMessage.message}}</span>
                     </div>
                 </div>
-                <form> User: {{name}} :
+                <form > User: {{name}} :
                     <input type="text" ng-model="chatMessage" />
-                    <button type="submit" ng-click="sendChat()">Send</button>
-                    <button type="submit" ng-click="clear()">Clear</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    <button class="btn" type="submit" ng-click="sendChat()"><b>Send</b></button>
+                    <button class="btn"  type="submit" ng-click="clear()"><b>Clear</b></button>
+                    <button   type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
                 </form>
             </div>
+        </div>  
         </div>
+        
 </body>
+
+
+
 <script type="text/javascript" src="../js/products.js"></script>
 
 </html>
